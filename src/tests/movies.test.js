@@ -51,11 +51,6 @@ test("UPDATE -> 'BASE_URL/:id', should return status code 200", async () => {
     expect(res.body.releaseYear).toBe(movieUpdate.releaseYear)
 })
 
-/*
-
-POST /movies/:id/directors
-POST /movies/:id/genres
- */
 
 /*POST /movies/:id/actors */
 test("POST 'BASE_URL/:id/actors', should return status code 200", async () => {
@@ -80,6 +75,7 @@ test("POST 'BASE_URL/:id/actors', should return status code 200", async () => {
     await actor.destroy()
 })
 
+//POST /movies/:id/directors
 test("POST 'BASE_URL/:id/direcctors', should return status code 200", async () => {
     const directorBody = {
         firstName: "Pancrasio",
@@ -102,6 +98,7 @@ test("POST 'BASE_URL/:id/direcctors', should return status code 200", async () =
     await director.destroy()
 })
 
+//POST /movies/:id/genres
 test("POST 'BASE_URL/:id/genres', should return status code 200", async () => {
     const genreBody = {
         name: "Accion",
